@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Authentic Malaysian cuisine experience at Taste of Malaysia - a modern restaurant blending traditional flavors with contemporary presentation">
+    <meta property="og:title" content="Taste of Malaysia - Authentic Malaysian Cuisine">
+    <meta property="og:description" content="Experience the vibrant flavors of Malaysia at our modern restaurant">
+    <meta property="og:image" content="https://example.com/og-image.jpg">
+    <meta name="theme-color" content="#0F6B4F">
+    <title>Taste of Malaysia - Authentic Malaysian Cuisine</title>
+    <style>
+        :root {
+            --primary: #0F6B4F;
+            --secondary: #F4A340;
+            --accent: #C41E3A;
+            --bg: #FFF8F0;
+            --text: #2C2C2C;
+            --shadow: rgba(0,0,0,0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg) url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgogICAgPHBhdHRlcm4gaWQ9ImJhdGlrIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcGF0dGVyblRyYW5zZm9ybT0icm90YXRlKDQ1KSI+CiAgICAgICAgPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjUwLDAuMSkiLz4KICAgIDwvcGF0dGVybj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjYmF0aWspIi8+Cjwvc3ZnPg==');
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Navigation Styles */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 107, 79, 0.7);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(15, 107, 79, 0.7), rgba(15, 107, 79, 0.7)), url('https://example.com/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 0 5%;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .social-handles {
+            margin: 2rem 0;
+        }
+
+        .cta-button {
+            background: var(--accent);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(196, 30, 58, 0.3);
+        }
+
+        /* Menu Section Styles */
+        section {
+            padding: 5rem 5%;
+            min-height: 100vh;
+        }
+
+        .section-heading {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--secondary);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .menu-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: transform 0.4s, box-shadow 0.4s;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .menu-card.animate {
+            animation: fadeIn 0.8s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .menu-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .menu-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+
+        .menu-content {
+            padding: 1.5rem;
+        }
+
+        .menu-title {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-price {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-desc {
+            color: #666;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        .footer-social {
+            margin: 1.5rem 0;
+        }
+
+        .footer-social a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1000;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .section-heading {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-heading {
+                font-size: 1.8rem;
+            }
+            
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#home" class="nav-logo">Taste of Malaysia</a>
+        <div class="nav-links">
+            <a href="#appetizers">Appetizers</a>
+            <a href="#noodles">Noodles</a>
+            <a href="#rice">Rice Dishes</a>
+            <a href="#classics">Classics</a>
+            <a href="#chinese">Chinese-Malaysian</a>
+            <a href="#indian">Indian-Malaysian</a>
+            <a href="#east">East Malaysian</a>
+            <a href="#desserts">Desserts</a>
+            <a href="#drinks">Drinks</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>TASTE OF MALAYSIA</h1>
+        <p>Authentic Malaysian Cuisine</p>
+        <div class="social-handles">
+            <p>Follow us: @cwhui1001 @Aiyern30</p>
+        </div>
+        <a href="#menu" class="cta-button">View Menu</a>
+    </section>
+
+    <!-- Menu Sections -->
+    <section id="appetizers">
+        <h2 class="section-heading">Appetizers</h2>
+        <div class="menu-grid">
+            <!-- Appetizers will be dynamically added via JS -->
+        </div>
+    </section>
+
+    <!-- Other sections follow same structure -->
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">↑</div>
+
+    <script>
+        // Menu data
+        const menuData = {
+            appetizers: [
+                {name: "Roti Canai", price: "RM4.50", desc: "Flaky flatbread served with curry dip", img: "https://example.com/roti-canai.jpg"},
+                {name: "Chicken Satay", price: "RM12.00 / 6 pcs", desc: "Grilled skewers with peanut sauce", img: "https://example.com/satay.jpg"},
+                {name: "Cucur Udang", price: "RM8.00", desc: "Prawn fritters with chili dip", img: "https://example.com/cucur-udang.jpg"}
+            ],
+            // Other sections would have similar data structures
+        };
+
+        // Render menu items
+        function renderMenu(sectionId, items) {
+            const container = document.querySelector(`#${sectionId} .menu-grid`);
+            container.innerHTML = '';
+            
+            items.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = 'menu-card';
+                card.style.animationDelay = `${index * 0.1}s`;
+                card.innerHTML = `
+                    <img src="${item.img}" alt="${item.name}" class="menu-img" loading="lazy">
+                    <div class="menu-content">
+                        <h3 class="menu-title">${item.name}</h3>
+                        <p class="menu-price">${item.price}</p>
+                        <p class="menu-desc">${item.desc}</p>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+            
+            // Trigger animation
+            setTimeout(() => {
+                document.querySelectorAll(`#${sectionId} .menu-card`).forEach(card => {
+                    card.classList.add('animate');
+                });
+            }, 100);
+        }
+
+        // Initialize
+        window.addEventListener('DOMContentLoaded', () => {
+            // Render all menu sections
+            renderMenu('appetizers', menuData.appetizers);
+            // Other sections would be rendered similarly
+            
+            // Back to top functionality
+            const backToTop = document.querySelector('.back-to-top');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+            
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            });
+            
+            // Fade-in animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, {threshold: 0.1});
+            
+            document.querySelectorAll('.menu-card').forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
