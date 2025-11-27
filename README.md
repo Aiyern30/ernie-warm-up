@@ -200,7 +200,7 @@ Total dishes: **27**
 
 # 🌐 Live Demo
 
-👉 [_(GitHub Pages URL)_](https://aiyern30.github.io/ernie-warm-up/)
+👉 [_GitHub Pages URL_](https://aiyern30.github.io/ernie-warm-up/)
 
 ---
 
@@ -222,7 +222,7 @@ git clone https://github.com/yourusername/taste-of-malaysia.git
 cd taste-of-malaysia
 ```
 
-Open `taste-of-malaysia.html` in any browser.
+Open `index.html` in any browser.
 
 ---
 
