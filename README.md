@@ -90,57 +90,116 @@ Below is the **original full prompt** used to generate the website:
 
 ```md
 Create a modern, responsive single-page restaurant website for "Taste of Malaysia" with the following specifications:
-
 Color Theme:
 
-- Primary: #0F6B4F
-- Secondary: #F4A340
-- Accent: #C41E3A
-- Background: #FFF8F0
-- Text: #2C2C2C
-- Navigation bar: Semi-transparent dark overlay with white text
+Primary: Deep emerald green (#0F6B4F) - representing Malaysian tropical heritage
+Secondary: Warm golden yellow (#F4A340) - inspired by turmeric and traditional spices
+Accent: Rich crimson red (#C41E3A) - reminiscent of sambal and chili
+Background: Cream white (#FFF8F0) with subtle texture
+Text: Dark charcoal (#2C2C2C) for readability
+Navigation bar: Semi-transparent dark overlay with white text
 
 Website Structure:
 
-1. Hero Section:
+Hero Section
 
-   - Full-width banner
-   - Heading: “TASTE OF MALAYSIA”
-   - Subheading: “Authentic Malaysian Cuisine”
-   - Social handles: @cwhui1001 @Aiyern30
-   - CTA: “View Menu”
+Full-width banner with "TASTE OF MALAYSIA" as main heading
+Subheading: "Authentic Malaysian Cuisine"
+Social media handles: @cwhui1001 @Aiyern30
+Call-to-action button: "View Menu"
 
-2. Sticky Navigation Bar with links:
-   Home | Appetizers | Noodles | Rice Dishes | Classics | Chinese-Malaysian | Indian-Malaysian | East Malaysian | Desserts | Drinks
 
-3. Menu Sections (with images):
+Navigation Bar (Sticky on scroll)
 
-   - Appetizers: Roti Canai, Satay, Cucur Udang
-   - Noodles: Char Kuey Teow, Mee Goreng Mamak, Asam Laksa
-   - Rice Dishes: Nasi Lemak Ayam, Hainanese Chicken Rice, Nasi Kukus
-   - Malaysian Classics: Rendang, Asam Pedas, Ikan Bakar
-   - Chinese-Malaysian: Sweet & Sour Chicken, Claypot Rice, Steamed Fish
-   - Indian-Malaysian: Tandoori Set, Mutton Varuval, Chapati
-   - East Malaysian: Hinava, Umai, Linopot
-   - Desserts: Cendol, Pisang Goreng Cheese, Onde-Onde
-   - Drinks: Teh Tarik, Sirap Bandung, Kopi O
+Logo: "Taste of Malaysia"
+Menu links: Home | Appetizers | Noodles | Rice Dishes | Classics | Chinese-Malaysian | Indian-Malaysian | East Malaysian | Desserts | Drinks
+Each link should smoothly scroll to the corresponding section
 
-4. Footer:
-   - Contact placeholder
-   - Social icons
-   - Copyright notice
+
+Menu Sections (in order):
+Appetizers Section:
+
+Roti Canai (RM4.50) - with first image
+Chicken Satay (RM12.00 / 6 pcs) - with second image
+Cucur Udang (RM8.00) - with third image
+
+Noodles Section:
+
+Char Kuey Teow (RM12.50) - with first noodles image
+Mee Goreng Mamak (RM10.00) - with second noodles image
+Asam Laksa (RM11.00) - with third noodles image
+
+Rice Dishes Section:
+
+Nasi Lemak Ayam Goreng (RM14.00) - with first rice image
+Hainanese Chicken Rice (RM11.50) - with second rice image
+Nasi Kukus (RM12.50) - with third rice image
+
+Malaysian Classics Section:
+
+Beef Rendang (RM16.50) - with first classics image
+Asam Pedas Fish (RM18.00) - with second classics image
+Ikan Bakar (RM18.50) - with third classics image
+
+Chinese-Malaysian Dishes Section:
+
+Sweet & Sour Chicken (RM12.50) - with first Chinese-Malaysian image
+Claypot Chicken Rice (RM13.00) - with second Chinese-Malaysian image
+Hainanese Steamed Fish (RM17.00) - with third Chinese-Malaysian image
+
+Indian-Malaysian Dishes Section:
+
+Tandoori Chicken Set (RM14.00) - with first Indian-Malaysian image
+Mutton Varuval (RM18.50) - with second Indian-Malaysian image
+Chapati with Chicken Curry (RM8.00) - with third Indian-Malaysian image
+
+East Malaysian Dishes Section:
+
+Hinava from Sabah (RM12.00) - with first East Malaysian image
+Umai from Sarawak (RM12.00) - with second East Malaysian image
+Linopot from Sabah (RM11.00) - with third East Malaysian image
+
+Desserts Section:
+
+Cendol (RM6.00) - with first dessert image
+Pisang Goreng Cheese (RM7.00) - with second dessert image
+Onde-Onde (RM5.00 / 8 pcs) - with third dessert image
+
+Drinks Section:
+
+Teh Tarik (RM4.50) - with first drink image
+Sirap Bandung (RM3.50) - with second drink image
+Kopi O (RM3.50) - with third drink image
+
+
+Footer Section:
+
+Contact information placeholder
+Social media icons: @cwhui1001 @Aiyern30
+Copyright notice
+
+
 
 Design Requirements:
 
-- Card layout with hover lift
-- Image-first designed dish cards
-- Batik pattern accents
-- Fade-in animation on scroll
-- Smooth scroll behavior
-- Back-to-top floating button
-- Single HTML file with CSS + JS embedded
-- Use provided image URLs
-- SEO meta tags
+Use a card-based layout for menu items with hover effects (slight lift and shadow)
+Each menu item card should display: image on top, dish name, price, and description
+Add subtle fade-in animations as users scroll to each section
+Include decorative Malaysian batik patterns as background accents
+Make the website fully responsive (mobile, tablet, desktop)
+Use elegant typography: heading font should be bold and modern, body text should be clean and readable
+Add a "Back to Top" floating button
+Include smooth scroll behavior for all navigation links
+
+Technical Specifications:
+
+Single HTML file with embedded CSS and JavaScript
+Use the exact image URLs provided in the markdown
+Ensure all images are properly sized and optimized for web viewing
+Add loading states for images
+Include meta tags for SEO and social media sharing
+
+Please generate a complete, production-ready HTML file with all styling and functionality included.
 ```
 
 ---
