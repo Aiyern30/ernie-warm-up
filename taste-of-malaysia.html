@@ -31,6 +31,16 @@
             background: var(--bg) url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgogICAgPHBhdHRlcm4gaWQ9ImJhdGlrIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcGF0dGVyblRyYW5zZm9ybT0icm90YXRlKDQ1KSI+CiAgICAgICAgPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjUwLDAuMSkiLz4KICAgIDwvcGF0dGVybj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjYmF0aWspIi8+Cjwvc3ZnPg==');
             color: var(--text);
             line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        body.loaded {
+            animation: pageLoadFade 0.5s ease-in;
+        }
+
+        @keyframes pageLoadFade {
+            from { opacity: 0.8; }
+            to { opacity: 1; }
         }
 
         /* Navigation Styles */
@@ -130,50 +140,192 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: linear-gradient(rgba(15, 107, 79, 0.7), rgba(15, 107, 79, 0.7)), url('https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//463229a4-cc8a-473c-ae55-640714977161/markdown_0/imgs/img_in_image_box_561_1193_1013_1533.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T03%3A32%3A16Z%2F-1%2F%2F6d1ab04148deff5fa9b02e44942fbabed757ed0342e1b30145d6d57419691e25');
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(244, 163, 64, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(196, 30, 58, 0.3) 0%, transparent 50%),
+                linear-gradient(135deg, rgba(15, 107, 79, 0.8), rgba(15, 107, 79, 0.6)), 
+                url('https://globaleat.net/wp-content/uploads/2024/11/Malaysia-Nasi-Lemak-Borneo-Wild-Cuisine-Malaysia-Food-TM.jpg');
             background-size: cover;
             background-position: center;
             color: white;
             padding: 0 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            text-align: center;
+            width: 100%;
         }
 
         .hero h1 {
             font-size: 4rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            font-weight: 800;
+            letter-spacing: 2px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideInUp 1s ease-out 0.5s forwards;
+            background: linear-gradient(45deg, #fff, #f0f0f0, #fff);
+            background-size: 200% 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: slideInUp 1s ease-out 0.5s forwards, textShine 2s ease-in-out 2s infinite;
+        }
+
+        @keyframes slideInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+                -webkit-text-fill-color: white;
+            }
+        }
+
+        @keyframes textShine {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
 
         .hero p {
             font-size: 1.5rem;
             margin-bottom: 2rem;
             max-width: 600px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideInUp 1s ease-out 0.8s forwards;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .particle:nth-child(1) { width: 6px; height: 6px; left: 10%; animation-delay: 0s; }
+        .particle:nth-child(2) { width: 8px; height: 8px; left: 20%; animation-delay: 1s; }
+        .particle:nth-child(3) { width: 4px; height: 4px; left: 30%; animation-delay: 2s; }
+        .particle:nth-child(4) { width: 10px; height: 10px; left: 40%; animation-delay: 0.5s; }
+        .particle:nth-child(5) { width: 6px; height: 6px; left: 50%; animation-delay: 1.5s; }
+        .particle:nth-child(6) { width: 8px; height: 8px; left: 60%; animation-delay: 2.5s; }
+        .particle:nth-child(7) { width: 4px; height: 4px; left: 70%; animation-delay: 0.3s; }
+        .particle:nth-child(8) { width: 7px; height: 7px; left: 80%; animation-delay: 1.8s; }
+        .particle:nth-child(9) { width: 5px; height: 5px; left: 90%; animation-delay: 0.8s; }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-10vh) rotate(360deg);
+                opacity: 0;
+            }
         }
 
         .social-handles {
             margin: 2rem 0;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideInUp 1s ease-out 1.1s forwards;
+            text-align: center;
         }
 
         .social-handles p {
             font-size: 1.2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            text-align: center;
         }
 
         .cta-button {
-            background: var(--accent);
+            background: linear-gradient(135deg, var(--accent), #E91E63);
             color: white;
-            padding: 12px 30px;
+            padding: 15px 40px;
             border: none;
-            border-radius: 30px;
+            border-radius: 50px;
             font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(196, 30, 58, 0.3);
+            opacity: 0;
+            transform: translateY(30px) scale(0.8);
+            animation: slideInUp 1s ease-out 1.4s forwards, pulse 2s infinite 3s;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
         }
 
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(196, 30, 58, 0.3);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(196, 30, 58, 0.4);
+            background: linear-gradient(135deg, #E91E63, var(--accent));
+        }
+
+        .cta-button:active {
+            transform: translateY(-2px) scale(1.02);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
 
         /* Menu Section Styles */
@@ -313,6 +465,51 @@
             opacity: 1;
         }
 
+        /* Advanced animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Parallax effect for hero background */
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120%;
+            background: inherit;
+            will-change: transform;
+        }
+
+        /* Enhanced hover effects */
+        .hero-content:hover .hero h1 {
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+        }
+
+
+        @keyframes breathe {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+
+        /* Magnetic effect for CTA button */
+        .cta-button {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hero:hover .cta-button {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(196, 30, 58, 0.3);
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .hamburger {
@@ -345,14 +542,29 @@
             
             .hero h1 {
                 font-size: 2.5rem;
+                animation-delay: 0.3s;
             }
             
             .hero p {
                 font-size: 1.2rem;
+                animation-delay: 0.6s;
+            }
+
+            .social-handles {
+                animation-delay: 0.9s;
+            }
+
+            .cta-button {
+                animation-delay: 1.2s;
+                padding: 12px 30px;
             }
             
             .section-heading {
                 font-size: 2rem;
+            }
+
+            .particle {
+                display: none; /* Hide particles on mobile for better performance */
             }
         }
 
@@ -402,12 +614,25 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <h1 data-lang-key="hero-title">TASTE OF MALAYSIA</h1>
-        <p data-lang-key="hero-subtitle">Authentic Malaysian Cuisine</p>
-        <div class="social-handles">
-            <p data-lang-key="social-handles">Follow us: @cwhui1001 @Aiyern30</p>
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
         </div>
-        <a href="#menu" class="cta-button" data-lang-key="view-menu">View Menu</a>
+        <div class="hero-content">
+            <h1 data-lang-key="hero-title">TASTE OF MALAYSIA</h1>
+            <p data-lang-key="hero-subtitle">Authentic Malaysian Cuisine Experience</p>
+            <div class="social-handles">
+                <p data-lang-key="social-handles">Follow us: @cwhui1001 @Aiyern30</p>
+            </div>
+            <a href="#menu" class="cta-button" data-lang-key="view-menu">View Menu</a>
+        </div>
     </section>
 
     <!-- Menu Sections -->
@@ -928,8 +1153,108 @@
         backToTop.addEventListener('click', () => {
             window.scrollTo({top: 0, behavior: 'smooth'});
         });
+
+        // Enhanced Hero Animations
+        const hero = document.querySelector('.hero');
+        const heroContent = document.querySelector('.hero-content');
+        const particles = document.querySelectorAll('.particle');
+
+        // Parallax effect for hero background
+        function updateParallax() {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+            
+            if (hero) {
+                hero.style.transform = `translateY(${rate}px)`;
+            }
+        }
+
+        // Cursor tracking for hero content
+        function trackCursor(e) {
+            const rect = hero.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / centerY * 10;
+            const rotateY = (centerX - x) / centerX * 10;
+            
+            if (heroContent && window.innerWidth > 768) {
+                heroContent.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            }
+        }
+
+        // Mouse leave reset
+        function resetHeroTransform() {
+            if (heroContent && window.innerWidth > 768) {
+                heroContent.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+            }
+        }
+
+        // Scroll-triggered animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        // Dynamic particle animation based on scroll
+        function animateParticles() {
+            const scrolled = window.pageYOffset;
+            
+            particles.forEach((particle, index) => {
+                const speed = (index + 1) * 0.5;
+                const yPos = scrolled * speed;
+                const rotation = scrolled * 0.1 * (index + 1);
+                
+                particle.style.transform = `translateY(${yPos}px) rotate(${rotation}deg)`;
+                particle.style.opacity = Math.max(0, 1 - (scrolled / window.innerHeight));
+            });
+        }
+
+        // Optimized scroll handler using requestAnimationFrame
+        let ticking = false;
         
-        // Fade-in animations
+        function handleScroll() {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    updateParallax();
+                    animateParticles();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+
+        // Event listeners
+        if (hero) {
+            hero.addEventListener('mousemove', trackCursor);
+            hero.addEventListener('mouseleave', resetHeroTransform);
+        }
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        
+        // Initialize animations on page load
+        window.addEventListener('load', () => {
+            // Trigger initial animations
+            document.querySelectorAll('.scroll-reveal').forEach(element => {
+                scrollObserver.observe(element);
+            });
+            
+            // Add loading animation class
+            document.body.classList.add('loaded');
+        });
+        
+        // Fade-in animations for menu cards
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
