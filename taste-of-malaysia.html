@@ -19,6 +19,10 @@
             --shadow: rgba(0,0,0,0.1);
         }
 
+        html {
+            scroll-padding-top: 100px;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -332,6 +336,11 @@
         section {
             padding: 3rem 5%;
             min-height: auto;
+            scroll-margin-top: 80px;
+        }
+
+        section:not(.hero) {
+            padding-top: 4rem;
         }
 
         .section-heading {
@@ -339,6 +348,7 @@
             font-size: 2.5rem;
             color: var(--primary);
             margin-bottom: 3rem;
+            margin-top: 1rem;
             position: relative;
         }
 
@@ -1276,9 +1286,18 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const navHeight = 80;
+                    const targetPosition = targetElement.offsetTop - navHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
         
