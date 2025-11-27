@@ -200,7 +200,7 @@ Total dishes: **27**
 
 # 🌐 Live Demo
 
-👉 _(Insert your GitHub Pages URL here)_
+👉 [_(Insert your GitHub Pages URL here)_](https://aiyern30.github.io/ernie-warm-up/)
 
 ---
 
