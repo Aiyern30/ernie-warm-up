@@ -72,6 +72,28 @@
             opacity: 0.8;
         }
 
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .language-toggle {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 8px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .language-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
         .hamburger {
             display: none;
             flex-direction: column;
@@ -357,300 +379,303 @@
     <!-- Navigation -->
     <nav>
         <a href="#home" class="nav-logo">Taste of Malaysia</a>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
         <div class="nav-links">
-            <a href="#appetizers">Appetizers</a>
-            <a href="#noodles">Noodles</a>
-            <a href="#rice">Rice Dishes</a>
-            <a href="#classics">Classics</a>
-            <a href="#chinese">Chinese-Malaysian</a>
-            <a href="#indian">Indian-Malaysian</a>
-            <a href="#east">East Malaysian</a>
-            <a href="#desserts">Desserts</a>
-            <a href="#drinks">Drinks</a>
+            <a href="#appetizers" data-lang-key="appetizers">Appetizers</a>
+            <a href="#noodles" data-lang-key="noodles">Noodles</a>
+            <a href="#rice" data-lang-key="rice-dishes">Rice Dishes</a>
+            <a href="#classics" data-lang-key="nav-classics">Classics</a>
+            <a href="#chinese" data-lang-key="nav-chinese-malaysian">Chinese-Malaysian</a>
+            <a href="#indian" data-lang-key="nav-indian-malaysian">Indian-Malaysian</a>
+            <a href="#east" data-lang-key="nav-east-malaysian">East Malaysian</a>
+            <a href="#desserts" data-lang-key="desserts">Desserts</a>
+            <a href="#drinks" data-lang-key="drinks">Drinks</a>
+        </div>
+        <div class="nav-right">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <button class="language-toggle" id="languageToggle">中</button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <h1>TASTE OF MALAYSIA</h1>
-        <p>Authentic Malaysian Cuisine</p>
+        <h1 data-lang-key="hero-title">TASTE OF MALAYSIA</h1>
+        <p data-lang-key="hero-subtitle">Authentic Malaysian Cuisine</p>
         <div class="social-handles">
-            <p>Follow us: @cwhui1001 @Aiyern30</p>
+            <p data-lang-key="social-handles">Follow us: @cwhui1001 @Aiyern30</p>
         </div>
-        <a href="#menu" class="cta-button">View Menu</a>
+        <a href="#menu" class="cta-button" data-lang-key="view-menu">View Menu</a>
     </section>
 
     <!-- Menu Sections -->
     <section id="appetizers">
-        <h2 class="section-heading">Appetizers</h2>
+        <h2 class="section-heading" data-lang-key="appetizers">Appetizers</h2>
         <div class="menu-grid">
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_1/imgs/img_in_image_box_595_156_1030_536.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A42Z%2F-1%2F%2F21bbdb443c7a5a40e606f6f55a9b48784f7840f8cae3b6422a853cec9a3d6ee6" alt="Roti Canai" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Roti Canai</h3>
+                    <h3 class="menu-title" data-lang-key="roti-canai">Roti Canai</h3>
                     <p class="menu-price">RM4.50</p>
-                    <p class="menu-desc">Flaky flatbread served with curry dip</p>
+                    <p class="menu-desc" data-lang-key="roti-canai-desc">Flaky flatbread served with curry dip</p>
                 </div>
             </div>
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_1/imgs/img_in_image_box_591_673_1015_1035.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A42Z%2F-1%2F%2F9cee2a4990de1e5b70e0b4418ab330bfd62e5abf02b38c968772f9875a424edd" alt="Chicken Satay" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Chicken Satay</h3>
+                    <h3 class="menu-title" data-lang-key="chicken-satay">Chicken Satay</h3>
                     <p class="menu-price">RM12.00 / 6 pcs</p>
-                    <p class="menu-desc">Grilled skewers with peanut sauce</p>
+                    <p class="menu-desc" data-lang-key="chicken-satay-desc">Grilled skewers with peanut sauce</p>
                 </div>
             </div>
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_1/imgs/img_in_image_box_591_1183_1018_1542.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A42Z%2F-1%2F%2F4087ba8ef9a578616be46595000b4fed11c590fca894c0acf706c27d2730dea0" alt="Cucur Udang" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Cucur Udang</h3>
+                    <h3 class="menu-title" data-lang-key="cucur-udang">Cucur Udang</h3>
                     <p class="menu-price">RM8.00</p>
-                    <p class="menu-desc">Prawn fritters with chili dip</p>
+                    <p class="menu-desc" data-lang-key="cucur-udang-desc">Prawn fritters with chili dip</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="noodles">
-        <h2 class="section-heading">Noodles</h2>
+        <h2 class="section-heading" data-lang-key="noodles">Noodles</h2>
         <div class="menu-grid">
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_2/imgs/img_in_image_box_582_143_1051_540.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A42Z%2F-1%2F%2F8516bf790d72305914361e103531fa9fdb3ad81f0ff6f4bfae7d26b481947dd6" alt="Char Kuey Teow" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Char Kuey Teow</h3>
+                    <h3 class="menu-title" data-lang-key="char-kuey-teow">Char Kuey Teow</h3>
                     <p class="menu-price">RM12.50</p>
-                    <p class="menu-desc">Stir-fried rice noodles with shrimp and bean sprouts</p>
+                    <p class="menu-desc" data-lang-key="char-kuey-teow-desc">Stir-fried rice noodles with shrimp and bean sprouts</p>
                 </div>
             </div>
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_2/imgs/img_in_image_box_580_655_1052_1046.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A42Z%2F-1%2F%2Ffcd603db35471fff880bef6ba3a940d85751e6618a5344204581499d8236e83b" alt="Mee Goreng Mamak" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Mee Goreng Mamak</h3>
+                    <h3 class="menu-title" data-lang-key="mee-goreng-mamak">Mee Goreng Mamak</h3>
                     <p class="menu-price">RM10.00</p>
-                    <p class="menu-desc">Spicy fried noodles with chicken and tofu</p>
+                    <p class="menu-desc" data-lang-key="mee-goreng-mamak-desc">Spicy fried noodles with chicken and tofu</p>
                 </div>
             </div>
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_2/imgs/img_in_image_box_581_1157_1049_1578.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A42Z%2F-1%2F%2F3d2b33665cddc95a5e1e0eb688d64691f26eadd216c1216994e33f0cacce1987" alt="Asam Laksa" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Asam Laksa</h3>
+                    <h3 class="menu-title" data-lang-key="asam-laksa">Asam Laksa</h3>
                     <p class="menu-price">RM11.00</p>
-                    <p class="menu-desc">Tamarind-based fish soup with noodles</p>
+                    <p class="menu-desc" data-lang-key="asam-laksa-desc">Tamarind-based fish soup with noodles</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="rice">
-        <h2 class="section-heading">Rice Dishes</h2>
+        <h2 class="section-heading" data-lang-key="rice-dishes">Rice Dishes</h2>
         <div class="menu-grid">
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_3/imgs/img_in_image_box_585_223_999_565.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A43Z%2F-1%2F%2Fdc7beb9111e517b4362fb3bc92925e8f3c5167edbbf3b0d63158132da2664f1d" alt="Nasi Lemak Ayam Goreng" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Nasi Lemak Ayam Goreng</h3>
+                    <h3 class="menu-title" data-lang-key="nasi-lemak">Nasi Lemak Ayam Goreng</h3>
                     <p class="menu-price">RM14.00</p>
-                    <p class="menu-desc">Coconut rice with fried chicken and sambal</p>
+                    <p class="menu-desc" data-lang-key="nasi-lemak-desc">Coconut rice with fried chicken and sambal</p>
                 </div>
             </div>
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_3/imgs/img_in_image_box_583_697_1002_1043.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A43Z%2F-1%2F%2F4fafe770481680b40a03d0c9584f1f201ee49f634895247c965defc19cb0df7f" alt="Hainanese Chicken Rice" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Hainanese Chicken Rice</h3>
+                    <h3 class="menu-title" data-lang-key="hainanese-chicken">Hainanese Chicken Rice</h3>
                     <p class="menu-price">RM11.50</p>
-                    <p class="menu-desc">Poached chicken with aromatic rice</p>
+                    <p class="menu-desc" data-lang-key="hainanese-chicken-desc">Poached chicken with aromatic rice</p>
                 </div>
             </div>
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_3/imgs/img_in_image_box_582_1194_1002_1542.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A43Z%2F-1%2F%2F857084fe2054dec23ea1e795792ab88c69f8870f42f77f79ae8aff9112c79651" alt="Nasi Kukus" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Nasi Kukus</h3>
+                    <h3 class="menu-title" data-lang-key="nasi-kukus">Nasi Kukus</h3>
                     <p class="menu-price">RM12.50</p>
-                    <p class="menu-desc">Steamed rice with fried chicken and vegetables</p>
+                    <p class="menu-desc" data-lang-key="nasi-kukus-desc">Steamed rice with fried chicken and vegetables</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="classics">
-        <h2 class="section-heading">Malaysian Classics</h2>
+        <h2 class="section-heading" data-lang-key="malaysian-classics">Malaysian Classics</h2>
         <div class="menu-grid">
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_4/imgs/img_in_image_box_593_201_1053_558.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A43Z%2F-1%2F%2Fb70affd89af6836103478e11162e9c6568cb452172f7f2c3bc6dd62e9fc47b46" alt="Beef Rendang" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Beef Rendang</h3>
+                    <h3 class="menu-title" data-lang-key="beef-rendang">Beef Rendang</h3>
                     <p class="menu-price">RM16.50</p>
-                    <p class="menu-desc">Slow-cooked beef in coconut milk and spices</p>
+                    <p class="menu-desc" data-lang-key="beef-rendang-desc">Slow-cooked beef in coconut milk and spices</p>
                 </div>
             </div>
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_4/imgs/img_in_image_box_580_729_1045_1052.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A43Z%2F-1%2F%2F478b6e6753b096929e149a675274000f4aad84e95d2d5778dbd32576c722aeff" alt="Asam Pedas Fish" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Asam Pedas Fish</h3>
+                    <h3 class="menu-title" data-lang-key="asam-pedas">Asam Pedas Fish</h3>
                     <p class="menu-price">RM18.00</p>
-                    <p class="menu-desc">Sour and spicy fish stew</p>
+                    <p class="menu-desc" data-lang-key="asam-pedas-desc">Sour and spicy fish stew</p>
                 </div>
             </div>
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_4/imgs/img_in_image_box_579_1197_1046_1539.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A43Z%2F-1%2F%2F279ca71fd93e06e458cb4b2b33e54c2d6ffe9f737f35ff4a44e854133c2ad1f4" alt="Ikan Bakar" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Ikan Bakar</h3>
+                    <h3 class="menu-title" data-lang-key="ikan-bakar">Ikan Bakar</h3>
                     <p class="menu-price">RM18.50</p>
-                    <p class="menu-desc">Grilled fish with sambal sauce</p>
+                    <p class="menu-desc" data-lang-key="ikan-bakar-desc">Grilled fish with sambal sauce</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="chinese">
-        <h2 class="section-heading">Chinese-Malaysian Dishes</h2>
+        <h2 class="section-heading" data-lang-key="chinese-malaysian">Chinese-Malaysian Dishes</h2>
         <div class="menu-grid">
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_5/imgs/img_in_image_box_582_174_1012_559.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A44Z%2F-1%2F%2F17a4b883c2d15d5eb9cebed264614c3e9c11def8f66db9889b9f298f830b1a74" alt="Sweet & Sour Chicken" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Sweet & Sour Chicken</h3>
+                    <h3 class="menu-title" data-lang-key="sweet-sour">Sweet & Sour Chicken</h3>
                     <p class="menu-price">RM12.50</p>
-                    <p class="menu-desc">Crispy chicken in tangy sauce</p>
+                    <p class="menu-desc" data-lang-key="sweet-sour-desc">Crispy chicken in tangy sauce</p>
                 </div>
             </div>
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_5/imgs/img_in_image_box_582_698_1003_1028.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A44Z%2F-1%2F%2Fc3f1bfc23ff20cc702e61ae5839f71510373f427d4a0a42a1b99cd0ab1e7049e" alt="Claypot Chicken Rice" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Claypot Chicken Rice</h3>
+                    <h3 class="menu-title" data-lang-key="claypot-chicken">Claypot Chicken Rice</h3>
                     <p class="menu-price">RM13.00</p>
-                    <p class="menu-desc">Rice cooked with chicken and mushrooms</p>
+                    <p class="menu-desc" data-lang-key="claypot-chicken-desc">Rice cooked with chicken and mushrooms</p>
                 </div>
             </div>
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_5/imgs/img_in_image_box_583_1177_1011_1521.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A44Z%2F-1%2F%2Fe673f08cdd62aac424754a336e4e577660acc48df769c3c7337bf1bf66eb630a" alt="Hainanese Steamed Fish" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Hainanese Steamed Fish</h3>
+                    <h3 class="menu-title" data-lang-key="hainanese-fish">Hainanese Steamed Fish</h3>
                     <p class="menu-price">RM17.00</p>
-                    <p class="menu-desc">Steamed fish with soy sauce and ginger</p>
+                    <p class="menu-desc" data-lang-key="hainanese-fish-desc">Steamed fish with soy sauce and ginger</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="indian">
-        <h2 class="section-heading">Indian-Malaysian Dishes</h2>
+        <h2 class="section-heading" data-lang-key="indian-malaysian">Indian-Malaysian Dishes</h2>
         <div class="menu-grid">
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_6/imgs/img_in_image_box_585_212_1020_542.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A44Z%2F-1%2F%2F031305c7578dbfc089fc42023b6a5ce4809381ca53b95c7efb40005b7c89ee56" alt="Tandoori Chicken Set" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Tandoori Chicken Set</h3>
+                    <h3 class="menu-title" data-lang-key="tandoori-chicken">Tandoori Chicken Set</h3>
                     <p class="menu-price">RM14.00</p>
-                    <p class="menu-desc">Marinated chicken grilled in tandoor oven</p>
+                    <p class="menu-desc" data-lang-key="tandoori-chicken-desc">Marinated chicken grilled in tandoor oven</p>
                 </div>
             </div>
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_6/imgs/img_in_image_box_582_691_1020_1025.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A44Z%2F-1%2F%2F8ea1034f3a127dfa087f05c9f056cb592c0ee416ada382e41efab49bf9216c48" alt="Mutton Varuval" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Mutton Varuval</h3>
+                    <h3 class="menu-title" data-lang-key="mutton-varuval">Mutton Varuval</h3>
                     <p class="menu-price">RM18.50</p>
-                    <p class="menu-desc">Spicy dry mutton curry</p>
+                    <p class="menu-desc" data-lang-key="mutton-varuval-desc">Spicy dry mutton curry</p>
                 </div>
             </div>
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_6/imgs/img_in_image_box_581_1163_1012_1492.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A44Z%2F-1%2F%2F8d06642771512e8ccb4b87e1c5bff12848cac8202d2cba4c523358056535c62d" alt="Chapati with Chicken Curry" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Chapati with Chicken Curry</h3>
+                    <h3 class="menu-title" data-lang-key="chapati-chicken">Chapati with Chicken Curry</h3>
                     <p class="menu-price">RM8.00</p>
-                    <p class="menu-desc">Flatbread with chicken curry</p>
+                    <p class="menu-desc" data-lang-key="chapati-chicken-desc">Flatbread with chicken curry</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="east">
-        <h2 class="section-heading">East Malaysian Dishes</h2>
+        <h2 class="section-heading" data-lang-key="east-malaysian">East Malaysian Dishes</h2>
         <div class="menu-grid">
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_7/imgs/img_in_image_box_581_136_1066_558.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A45Z%2F-1%2F%2F9c9abf22754647dcb4eba397fb1651cf796a655c97a8660f76b95ea49d37a0a0" alt="Hinava from Sabah" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Hinava from Sabah</h3>
+                    <h3 class="menu-title" data-lang-key="hinava">Hinava from Sabah</h3>
                     <p class="menu-price">RM12.00</p>
-                    <p class="menu-desc">Traditional Kadazan-Dusun dish</p>
+                    <p class="menu-desc" data-lang-key="hinava-desc">Traditional Kadazan-Dusun dish</p>
                 </div>
             </div>
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_7/imgs/img_in_image_box_656_691_1004_1022.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A45Z%2F-1%2F%2Fdb591a6e5e7b3c99a82d8498a08e1e84c267a4ca10f27b344aadc70671cf4af7" alt="Umai from Sarawak" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Umai from Sarawak</h3>
+                    <h3 class="menu-title" data-lang-key="umai">Umai from Sarawak</h3>
                     <p class="menu-price">RM12.00</p>
-                    <p class="menu-desc">Raw fish salad with lime and chili</p>
+                    <p class="menu-desc" data-lang-key="umai-desc">Raw fish salad with lime and chili</p>
                 </div>
             </div>
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_7/imgs/img_in_image_box_582_1148_1004_1483.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A45Z%2F-1%2F%2F4fd1d57c44144ea6092bba43f4c6ce43aad92e853cf5414e391c0befdb7d9693" alt="Linopot from Sabah" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Linopot from Sabah</h3>
+                    <h3 class="menu-title" data-lang-key="linopot">Linopot from Sabah</h3>
                     <p class="menu-price">RM11.00</p>
-                    <p class="menu-desc">Wrapped rice with various fillings</p>
+                    <p class="menu-desc" data-lang-key="linopot-desc">Wrapped rice with various fillings</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="desserts">
-        <h2 class="section-heading">Desserts</h2>
+        <h2 class="section-heading" data-lang-key="desserts">Desserts</h2>
         <div class="menu-grid">
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_8/imgs/img_in_image_box_581_185_1035_538.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A45Z%2F-1%2F%2F99ad2853810b30b70cbbb34ca2f8af700e8f7d1f0880d22f7d860e6d74792bbb" alt="Cendol" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Cendol</h3>
+                    <h3 class="menu-title" data-lang-key="cendol">Cendol</h3>
                     <p class="menu-price">RM6.00</p>
-                    <p class="menu-desc">Green noodle dessert with coconut milk and palm sugar</p>
+                    <p class="menu-desc" data-lang-key="cendol-desc">Green noodle dessert with coconut milk and palm sugar</p>
                 </div>
             </div>
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_8/imgs/img_in_image_box_582_703_1029_1017.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A45Z%2F-1%2F%2F7c972c2156fc014f250e18a55201fcbcde44eb5f121c7a3b4d02daef7428e5f6" alt="Pisang Goreng Cheese" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Pisang Goreng Cheese</h3>
+                    <h3 class="menu-title" data-lang-key="pisang-goreng">Pisang Goreng Cheese</h3>
                     <p class="menu-price">RM7.00</p>
-                    <p class="menu-desc">Fried banana with cheese topping</p>
+                    <p class="menu-desc" data-lang-key="pisang-goreng-desc">Fried banana with cheese topping</p>
                 </div>
             </div>
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_8/imgs/img_in_image_box_581_1157_1038_1507.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A45Z%2F-1%2F%2F8a0be0d1c65511429caac88434e0bf735a8e7da7ca2e5b3bd98974e6c54ad27d" alt="Onde-Onde" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Onde-Onde</h3>
+                    <h3 class="menu-title" data-lang-key="onde-onde">Onde-Onde</h3>
                     <p class="menu-price">RM5.00 / 8 pcs</p>
-                    <p class="menu-desc">Pandan-flavored rice cake with palm sugar filling</p>
+                    <p class="menu-desc" data-lang-key="onde-onde-desc">Pandan-flavored rice cake with palm sugar filling</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="drinks">
-        <h2 class="section-heading">Drinks</h2>
+        <h2 class="section-heading" data-lang-key="drinks">Drinks</h2>
         <div class="menu-grid">
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_9/imgs/img_in_image_box_580_216_980_553.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A46Z%2F-1%2F%2F5e0fb1ab628d3c447ee01bcbdc6ca06f5d7609baf47b5a6540868f47d60fed3c" alt="Teh Tarik" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Teh Tarik</h3>
+                    <h3 class="menu-title" data-lang-key="teh-tarik">Teh Tarik</h3>
                     <p class="menu-price">RM4.50</p>
-                    <p class="menu-desc">Pulled tea with milk</p>
+                    <p class="menu-desc" data-lang-key="teh-tarik-desc">Pulled tea with milk</p>
                 </div>
             </div>
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_9/imgs/img_in_image_box_582_678_979_1013.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A46Z%2F-1%2F%2F20e68e1ec0ce145c72584e42450370723036622784784b4948145faf1e6ebe6c" alt="Sirap Bandung" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Sirap Bandung</h3>
+                    <h3 class="menu-title" data-lang-key="sirap-bandung">Sirap Bandung</h3>
                     <p class="menu-price">RM3.50</p>
-                    <p class="menu-desc">Rose syrup with milk</p>
+                    <p class="menu-desc" data-lang-key="sirap-bandung-desc">Rose syrup with milk</p>
                 </div>
             </div>
             <div class="menu-card">
                 <img src="https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl//2dd98e6c-6235-4500-8232-6893495d137e/markdown_9/imgs/img_in_image_box_582_1186_980_1522.jpg?authorization=bce-auth-v1%2F5cfe9a5e1454405eb2a975c43eace6ec%2F2025-11-26T15%3A52%3A46Z%2F-1%2F%2Feb30d12605ab0affe4510d5e8f86c86f3e54b2602aa9d850cb2470504b7a9600" alt="Kopi O" class="menu-img">
                 <div class="menu-content">
-                    <h3 class="menu-title">Kopi O</h3>
+                    <h3 class="menu-title" data-lang-key="kopi-o">Kopi O</h3>
                     <p class="menu-price">RM3.50</p>
-                    <p class="menu-desc">Traditional black coffee</p>
+                    <p class="menu-desc" data-lang-key="kopi-o-desc">Traditional black coffee</p>
                 </div>
             </div>
         </div>
@@ -659,14 +684,14 @@
     <!-- Footer Section -->
     <footer>
         <div class="footer-content">
-            <h3>Contact Us</h3>
-            <p>Email: info@tasteofmalaysia.com</p>
-            <p>Phone: +603 1234 5678</p>
+            <h3 data-lang-key="contact-us">Contact Us</h3>
+            <p data-lang-key="email">Email: info@tasteofmalaysia.com</p>
+            <p data-lang-key="phone">Phone: +603 1234 5678</p>
             <div class="footer-social">
                 <a href="https://instagram.com/cwhui1001">@cwhui1001</a>
                 <a href="https://instagram.com/Aiyern30">@Aiyern30</a>
             </div>
-            <p class="copyright">© 2025 Taste of Malaysia. All rights reserved.</p>
+            <p class="copyright">© 2025 Taste of Malaysia. <span data-lang-key="all-rights">All rights reserved.</span></p>
         </div>
     </footer>
 
@@ -674,6 +699,205 @@
     <div class="back-to-top">↑</div>
 
     <script>
+        // Translation dictionary
+        const translations = {
+            en: {
+                'hero-title': 'TASTE OF MALAYSIA',
+                'hero-subtitle': 'Authentic Malaysian Cuisine',
+                'social-handles': 'Follow us: @cwhui1001 @Aiyern30',
+                'view-menu': 'View Menu',
+                'appetizers': 'Appetizers',
+                'noodles': 'Noodles',
+                'rice-dishes': 'Rice Dishes',
+                'nav-classics': 'Classics',
+                'nav-chinese-malaysian': 'Chinese-Malaysian',
+                'nav-indian-malaysian': 'Indian-Malaysian',
+                'nav-east-malaysian': 'East Malaysian',
+                'malaysian-classics': 'Malaysian Classics',
+                'chinese-malaysian': 'Chinese-Malaysian Dishes',
+                'indian-malaysian': 'Indian-Malaysian Dishes',
+                'east-malaysian': 'East Malaysian Dishes',
+                'desserts': 'Desserts',
+                'drinks': 'Drinks',
+                'roti-canai': 'Roti Canai',
+                'roti-canai-desc': 'Flaky flatbread served with curry dip',
+                'chicken-satay': 'Chicken Satay',
+                'chicken-satay-desc': 'Grilled skewers with peanut sauce',
+                'cucur-udang': 'Cucur Udang',
+                'cucur-udang-desc': 'Prawn fritters with chili dip',
+                'char-kuey-teow': 'Char Kuey Teow',
+                'char-kuey-teow-desc': 'Stir-fried rice noodles with shrimp and bean sprouts',
+                'mee-goreng-mamak': 'Mee Goreng Mamak',
+                'mee-goreng-mamak-desc': 'Spicy fried noodles with chicken and tofu',
+                'asam-laksa': 'Asam Laksa',
+                'asam-laksa-desc': 'Tamarind-based fish soup with noodles',
+                'nasi-lemak': 'Nasi Lemak Ayam Goreng',
+                'nasi-lemak-desc': 'Coconut rice with fried chicken and sambal',
+                'hainanese-chicken': 'Hainanese Chicken Rice',
+                'hainanese-chicken-desc': 'Poached chicken with aromatic rice',
+                'nasi-kukus': 'Nasi Kukus',
+                'nasi-kukus-desc': 'Steamed rice with fried chicken and vegetables',
+                'beef-rendang': 'Beef Rendang',
+                'beef-rendang-desc': 'Slow-cooked beef in coconut milk and spices',
+                'asam-pedas': 'Asam Pedas Fish',
+                'asam-pedas-desc': 'Sour and spicy fish stew',
+                'ikan-bakar': 'Ikan Bakar',
+                'ikan-bakar-desc': 'Grilled fish with sambal sauce',
+                'sweet-sour': 'Sweet & Sour Chicken',
+                'sweet-sour-desc': 'Crispy chicken in tangy sauce',
+                'claypot-chicken': 'Claypot Chicken Rice',
+                'claypot-chicken-desc': 'Rice cooked with chicken and mushrooms',
+                'hainanese-fish': 'Hainanese Steamed Fish',
+                'hainanese-fish-desc': 'Steamed fish with soy sauce and ginger',
+                'tandoori-chicken': 'Tandoori Chicken Set',
+                'tandoori-chicken-desc': 'Marinated chicken grilled in tandoor oven',
+                'mutton-varuval': 'Mutton Varuval',
+                'mutton-varuval-desc': 'Spicy dry mutton curry',
+                'chapati-chicken': 'Chapati with Chicken Curry',
+                'chapati-chicken-desc': 'Flatbread with chicken curry',
+                'hinava': 'Hinava from Sabah',
+                'hinava-desc': 'Traditional Kadazan-Dusun dish',
+                'umai': 'Umai from Sarawak',
+                'umai-desc': 'Raw fish salad with lime and chili',
+                'linopot': 'Linopot from Sabah',
+                'linopot-desc': 'Wrapped rice with various fillings',
+                'cendol': 'Cendol',
+                'cendol-desc': 'Green noodle dessert with coconut milk and palm sugar',
+                'pisang-goreng': 'Pisang Goreng Cheese',
+                'pisang-goreng-desc': 'Fried banana with cheese topping',
+                'onde-onde': 'Onde-Onde',
+                'onde-onde-desc': 'Pandan-flavored rice cake with palm sugar filling',
+                'teh-tarik': 'Teh Tarik',
+                'teh-tarik-desc': 'Pulled tea with milk',
+                'sirap-bandung': 'Sirap Bandung',
+                'sirap-bandung-desc': 'Rose syrup with milk',
+                'kopi-o': 'Kopi O',
+                'kopi-o-desc': 'Traditional black coffee',
+                'contact-us': 'Contact Us',
+                'email': 'Email: info@tasteofmalaysia.com',
+                'phone': 'Phone: +603 1234 5678',
+                'all-rights': 'All rights reserved.'
+            },
+            zh: {
+                'hero-title': '马来西亚风味',
+                'hero-subtitle': '正宗马来西亚美食',
+                'social-handles': '关注我们: @cwhui1001 @Aiyern30',
+                'view-menu': '查看菜单',
+                'appetizers': '开胃菜',
+                'noodles': '面条',
+                'rice-dishes': '米饭料理',
+                'nav-classics': '经典菜',
+                'nav-chinese-malaysian': '中式马来西亚菜',
+                'nav-indian-malaysian': '印式马来西亚菜',
+                'nav-east-malaysian': '东马菜',
+                'malaysian-classics': '马来西亚经典菜',
+                'chinese-malaysian': '中式马来西亚菜',
+                'indian-malaysian': '印式马来西亚菜',
+                'east-malaysian': '东马来西亚菜',
+                'desserts': '甜品',
+                'drinks': '饮品',
+                'roti-canai': '印度飞饼',
+                'roti-canai-desc': '酥脆薄饼配咖喱蘸酱',
+                'chicken-satay': '沙爹鸡肉串',
+                'chicken-satay-desc': '烤串配花生酱',
+                'cucur-udang': '炸虾饼',
+                'cucur-udang-desc': '虾饼配辣椒蘸酱',
+                'char-kuey-teow': '炒粿条',
+                'char-kuey-teow-desc': '炒米粉配虾和豆芽',
+                'mee-goreng-mamak': '马来炒面',
+                'mee-goreng-mamak-desc': '辣味炒面配鸡肉和豆腐',
+                'asam-laksa': '亚参叻沙',
+                'asam-laksa-desc': '罗望子味鱼汤面',
+                'nasi-lemak': '椰浆饭炸鸡',
+                'nasi-lemak-desc': '椰浆饭配炸鸡和叁巴酱',
+                'hainanese-chicken': '海南鸡饭',
+                'hainanese-chicken-desc': '白切鸡配香米饭',
+                'nasi-kukus': '蒸饭',
+                'nasi-kukus-desc': '蒸饭配炸鸡和蔬菜',
+                'beef-rendang': '巴东牛肉',
+                'beef-rendang-desc': '椰奶香料慢炖牛肉',
+                'asam-pedas': '亚参 Fish',
+                'asam-pedas-desc': '酸辣鱼汤',
+                'ikan-bakar': '烤鱼',
+                'ikan-bakar-desc': '烤鱼配叁巴酱',
+                'sweet-sour': '糖醋鸡肉',
+                'sweet-sour-desc': '酥脆鸡肉配酸甜酱',
+                'claypot-chicken': '瓦煲鸡饭',
+                'claypot-chicken-desc': '鸡肉蘑菇焖饭',
+                'hainanese-fish': '海南蒸鱼',
+                'hainanese-fish-desc': '清蒸鱼配酱油和姜',
+                'tandoori-chicken': '坦都里烤鸡套餐',
+                'tandoori-chicken-desc': '腌制鸡肉在坦都里烤炉中烤制',
+                'mutton-varuval': '辣炒羊肉',
+                'mutton-varuval-desc': '辣味干炒羊肉',
+                'chapati-chicken': '印度薄饼配咖喱鸡',
+                'chapati-chicken-desc': '印度薄饼配咖喱鸡',
+                'hinava': '沙巴希纳瓦',
+                'hinava-desc': '传统卡达山杜顺族菜肴',
+                'umai': '砂拉越乌麦',
+                'umai-desc': '生鱼沙拉配青柠和辣椒',
+                'linopot': '沙巴利诺波特',
+                'linopot-desc': '包裹米饭配各种馅料',
+                'cendol': '煎蕊',
+                'cendol-desc': '绿色粉条甜品配椰奶和棕榈糖',
+                'pisang-goreng': '炸香蕉芝士',
+                'pisang-goreng-desc': '炸香蕉配芝士顶层',
+                'onde-onde': 'Onde-Onde',
+                'onde-onde-desc': '班兰味糯米糕配棕榈糖馅',
+                'teh-tarik': '拉茶',
+                'teh-tarik-desc': '拉制奶茶',
+                'sirap-bandung': '玫瑰糖浆',
+                'sirap-bandung-desc': '玫瑰糖浆配牛奶',
+                'kopi-o': '黑咖啡',
+                'kopi-o-desc': '传统黑咖啡',
+                'contact-us': '联系我们',
+                'email': '邮箱: info@tasteofmalaysia.com',
+                'phone': '电话: +603 1234 5678',
+                'all-rights': '保留所有权利。'
+            }
+        };
+
+        // Language toggle functionality
+        const languageToggle = document.getElementById('languageToggle');
+        let currentLang = 'en';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang;
+            
+            // Update all text elements
+            document.querySelectorAll('[data-lang-key]').forEach(element => {
+                const key = element.getAttribute('data-lang-key');
+                if (translations[lang] && translations[lang][key]) {
+                    // Store the original text for each element
+                    if (!element.getAttribute('data-en')) {
+                        element.setAttribute('data-en', element.textContent);
+                    }
+                    element.textContent = translations[lang][key];
+                }
+            });
+            
+            // Update toggle button text
+            languageToggle.textContent = lang === 'en' ? '中' : 'EN';
+            
+            // Save language preference
+            localStorage.setItem('siteLanguage', lang);
+        }
+
+        // Language toggle event
+        languageToggle.addEventListener('click', () => {
+            const newLang = currentLang === 'en' ? 'zh' : 'en';
+            setLanguage(newLang);
+        });
+
+        // Check for saved language preference
+        const savedLanguage = localStorage.getItem('siteLanguage');
+        if (savedLanguage) {
+            setLanguage(savedLanguage);
+        }
+
         // Hamburger menu toggle
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
