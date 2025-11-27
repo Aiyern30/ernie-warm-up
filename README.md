@@ -1,6 +1,3 @@
-Here is a **fully rewritten, polished, well-structured Markdown README** including **your additional prompt about the English ⇆ Mandarin toggle button**.
-
-I kept everything professional, organized, and suitable for GitHub.
 
 ---
 
