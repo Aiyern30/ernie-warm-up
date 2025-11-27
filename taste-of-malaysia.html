@@ -330,8 +330,8 @@
 
         /* Menu Section Styles */
         section {
-            padding: 5rem 5%;
-            min-height: 100vh;
+            padding: 3rem 5%;
+            min-height: auto;
         }
 
         .section-heading {
@@ -355,10 +355,12 @@
 
         .menu-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
+            justify-items: center;
+            padding: 0 1rem;
         }
 
         .menu-card {
@@ -369,6 +371,9 @@
             transition: transform 0.4s, box-shadow 0.4s;
             opacity: 0;
             transform: translateY(20px);
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
         }
 
         .menu-card.animate {
@@ -629,9 +634,9 @@
             <h1 data-lang-key="hero-title">TASTE OF MALAYSIA</h1>
             <p data-lang-key="hero-subtitle">Authentic Malaysian Cuisine Experience</p>
             <div class="social-handles">
-                <p data-lang-key="social-handles">Follow us: @cwhui1001 @Aiyern30</p>
+                <p data-lang-key="social-handles">By: @cwhui1001 @Aiyern30</p>
             </div>
-            <a href="#menu" class="cta-button" data-lang-key="view-menu">View Menu</a>
+            <a href="#appetizers" class="cta-button" data-lang-key="view-menu">View Menu</a>
         </div>
     </section>
 
@@ -929,7 +934,7 @@
             en: {
                 'hero-title': 'TASTE OF MALAYSIA',
                 'hero-subtitle': 'Authentic Malaysian Cuisine',
-                'social-handles': 'Follow us: @cwhui1001 @Aiyern30',
+                'social-handles': 'By : @cwhui1001 @Aiyern30',
                 'view-menu': 'View Menu',
                 'appetizers': 'Appetizers',
                 'noodles': 'Noodles',
