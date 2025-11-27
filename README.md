@@ -1,6 +1,4 @@
 
----
-
 # 🍽️ Taste of Malaysia — Web Builder Project
 
 _A Web Builder Warm-up Task using PaddleOCR-VL & ERNIE AI_
