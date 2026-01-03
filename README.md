@@ -261,7 +261,7 @@ Total dishes: **27**
 # 📁 Project Files
 
 ```
-├── taste-of-malaysia.html                               # Main website
+├── index.html                               # Main website
 ├── Taste of Malaysia (ERNIE HACK).pdf       # Original Canva design
 ├── Taste of Malaysia (ERNIE HACK).md        # OCR-extracted markdown
 └── README.md                                 # This file
@@ -272,7 +272,7 @@ Total dishes: **27**
 # 🚀 How to Run Locally
 
 ```bash
-git clone https://github.com/yourusername/taste-of-malaysia.git
+git clone https://github.com/Aiyern30/ernie-warm-up.git
 cd taste-of-malaysia
 ```
 
