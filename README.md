@@ -9,7 +9,7 @@ This project was developed as part of the **ERNIE Hackathon Warm-up Task: Web Bu
 
 - Extract text, layout, and images from a PDF using **PaddleOCR-VL**
 - Convert extracted content into **Markdown**
-- Transform the Markdown into a **fully responsive website** using **ERNIE AI**
+- Transform the Markdown into a **fully responsive website** using **ERNIE 5**
 - Deploy the final page using **GitHub Pages**
 
 ---
