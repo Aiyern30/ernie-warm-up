@@ -237,8 +237,8 @@ Total dishes: **27**
 
 # 🛠️ Technologies Used
 
-- **PaddleOCR-VL** — OCR extraction
-- **ERNIE AI** — Web code generation
+- **PaddleOCR-VL** — OCR extraction using PaddleOCR-VL [https://aistudio.baidu.com/paddleocr]
+- **ERNIE AI** — Web code generation using ERNIE 5 [https://ernie.baidu.com]
 - **HTML5/CSS3/JavaScript** — Frontend
 - **GitHub Pages** — Deployment
 - **Canva** — Menu design
